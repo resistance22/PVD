@@ -21,6 +21,13 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="grids">
+	<div class="grid"></div>
+	<div class="grid"></div>
+	<div class="grid"></div>
+	<div class="grid"></div>
+	<div class="grid"></div>
+</div>
 <div id="page" class="site container-fluid no-padd">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pvd' ); ?></a>
 
