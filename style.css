@@ -602,7 +602,9 @@ a {
     padding: 10px; }
   .main-navigation a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    color: white;
+    font-size: 12px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -844,3 +846,49 @@ object {
 
 .gallery-caption {
   display: block; }
+
+.infoline {
+  text-align: left;
+  direction: ltr;
+  background-color: #2d2d2d;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid #4a4a4a; }
+  .infoline .info {
+    margin-right: 25px; }
+    .infoline .info .icon {
+      width: 15px;
+      display: inline-block;
+      margin-right: 5px; }
+    .infoline .info .text {
+      color: #fff;
+      font-size: 10px; }
+
+.site-branding {
+  height: 50px;
+  text-align: left; }
+  .site-branding .custom-logo-link {
+    height: 100%; }
+  .site-branding .custom-logo {
+    height: 100%;
+    width: auto; }
+
+#masthead {
+  background-color: #323232;
+  padding: 40px 0 40px 0; }
+
+a:focus, a:visited {
+  text-decoration: none;
+  outline: none; }
+
+.grids {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1; }
+  .grids .grid {
+    float: left;
+    width: 20%;
+    height: 100%;
+    background-color: #E6E6E6;
+    border-left: 1px solid #989898; }
