@@ -62,19 +62,25 @@
 	</div>
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="site-branding">
-				<?php
-					the_custom_logo();
-				?>
-			</div><!-- .site-branding -->
-			<nav id="site-navigation" class="main-navigation">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-				?>
-			</nav><!-- #site-navigation -->
+			<div class="row no-gutters">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+					<nav id="site-navigation" class="main-navigation">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</nav><!-- #site-navigation -->
+				</div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="site-branding">
+						<?php
+							the_custom_logo();
+						?>
+					</div><!-- .site-branding -->
+				</div>
+			</div>
 		</div><!-- .container -->
 	</header><!-- #masthead -->
 
