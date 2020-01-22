@@ -30,7 +30,36 @@
 </div>
 <div id="page" class="site container-fluid no-padd">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pvd' ); ?></a>
-
+	<div class="infoline">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="phone info">
+					<span class="icon">
+						<img src="<?php echo esc_url( get_template_directory_uri(  ).'/icons/001-call.svg' ) ?>">
+					</span>
+					<span class="text">
+						+98 21 46026828
+					</span>
+				</div>
+				<div class="info email">
+					<span class="icon">
+						<img src="<?php echo esc_url( get_template_directory_uri(  ).'/icons/002-email.svg' ) ?>">
+					</span>
+					<span class="text">
+						kpfvt.co@gmail.com
+					</span>
+				</div>
+				<div class="info time">
+				<span class="icon">
+						<img src="<?php echo esc_url( get_template_directory_uri(  ).'/icons/003-clock.svg' ) ?>">
+					</span>
+					<span class="text">
+						Mon-Fri 08-18
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="site-branding">
@@ -38,7 +67,6 @@
 					the_custom_logo();
 				?>
 			</div><!-- .site-branding -->
-
 			<nav id="site-navigation" class="main-navigation">
 				<?php
 				wp_nav_menu( array(
