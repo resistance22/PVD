@@ -1,3 +1,33 @@
+.infoline{
+   text-align: left;
+   direction: ltr;
+   background-color: #2d2d2d;
+   padding: 15px 0 15px 0;
+   border-bottom: 1px solid #4a4a4a;
+   .info{
+      margin-right: 25px;
+      .icon{
+         width: 15px;
+         display: inline-block;
+         margin-right: 5px;
+      }
+      .text{
+         color:#fff;
+         font-size: 10px;
+      }
+   }
+}
+.site-branding{
+   height: 50px;
+   text-align: left;
+   .custom-logo-link{
+      height: 100%;
+   }
+   .custom-logo{
+      height: 100%;
+      width: auto;
+   }
+}
 #masthead{
    background-color: #323232;
    padding: 40px 0 40px 0;
