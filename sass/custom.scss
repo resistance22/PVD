@@ -1,3 +1,7 @@
+a,a:visited,a:focus{
+   color:$color_main_text;
+   text-decoration: none !important;
+}
 .infoline{
    text-align: left;
    direction: ltr;
@@ -17,6 +21,7 @@
       }
    }
 }
+
 .site-branding{
    height: 50px;
    text-align: left;
@@ -76,10 +81,10 @@ a:focus,a:visited{
       top: 0;
    }
    .bg-white{
-      width: 20%;
+       width: 20%;
        height: 100%;
        background: white;
-       left:0;
+       right:0;
        top:0;
        position: absolute;
    }
@@ -94,5 +99,26 @@ a:focus,a:visited{
    .plist-title{
       padding: 15px 0;
       border-bottom: 1px dashed $color_main_text;
+      h6{
+         position: relative;
+         padding-right: 25px;
+         color: $color_main_orange;
+      }
+      h6::before {
+         content: "";
+         width: 20px;
+         height: 2px;
+         background: $color_main_text;
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         right: 0;
+     }
+   }
+   .product-list-self{
+      a{
+         margin: 10px 0;
+         display: inline-block;
+      }
    }
 }
