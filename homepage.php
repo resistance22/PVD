@@ -4,15 +4,20 @@
 get_header();
 ?>
 	<?php 
- 	$posts = get_posts( [
+ 	$posts_first = get_posts( [
 		'numberposts'      => -1,
-		'category'         => 4,
+		'tax_query'         => [
+			[
+				'taxonomy' => 'product_cat',
+				'field' => 'term_id',
+				'terms' => 4
+			]
+		],
 		'orderby'          => 'date',
 		'order'            => 'DESC',
 		'post_type'        => 'product'
 	 ]);
 	?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="row no-gutters first-cat">
@@ -20,7 +25,7 @@ get_header();
 					<div class="row no-gutters">
 						<div class="col-12 col-sm-12 col-md-10 col-lg-10">
 							<div class="plist-bg">
-								<div calss="bg-white"></div>
+								<div class="bg-white"></div>
 								<div class="bg-orange"></div>
 							</div>
 							<div class="row no-gutters">
@@ -39,6 +44,13 @@ get_header();
 														<?php echo __('در حوزه پوشش‌دهی خلا','pvd'); ?>
 													</h2>
 												</div>
+											</div>
+											<div class="product-list-self">
+												<?php foreach($posts_first as $post): ?>
+													<a href="<?php echo esc_url($post->guid); ?>">
+														<?php echo esc_html($post -> post_title); ?>
+													</a>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
