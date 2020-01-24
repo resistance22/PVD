@@ -185,7 +185,45 @@ get_header();
 						</div>
 					</div>
 				</div>
+			</div><!-- .services -->
+		
+			<div class="contact">
+				<div class="background"></div>
+				<div class="container">
+					<div class="row no-gutters">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-5 map">
+							
+						</div>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-7">
+							<div class="contact-form-cont">
+								<h3 class="contact-form-title">
+									<?php _e('پروژه‌ی حدید دارید؟با ما در ارتباطب باشید.','pvd'); ?>
+								</h3>
+								<div class="form-cont">
+									<form>
+										<div class="col-12 field">
+											<input placeholder="<?php _e('نام','pvd')?>" class="name" type="text">
+										</div>
+										<div class="col-12 field">
+											<input placeholder="<?php _e('ایمیل','pvd')?>" class="email" type="email">
+										</div>
+										<div class="col-12 field">
+											<input placeholder="<?php _e('موضوع','pvd')?>" class="subject" type="text">
+										</div>
+										<div class="col-12 field">
+											<textarea rows="4" cols="50"></textarea>
+										</div>
+										<div class="col-12 btn">
+											<input type="button" value="<?php _e('ارسال','pvd'); ?>" >
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
