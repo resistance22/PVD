@@ -136,6 +136,56 @@ get_header();
 					</div>
 				</div>
 			</div>
+			<div class="services">
+				<div class="container">
+					<div class="row no-gutters">
+						<div class="title">
+							<h5>‫شرکت خلا پوشان فلز همواره آماده‌ی پاسخ‌گویی به سوالات شماست</h5>
+							<h2>در صورتی که نیاز به راهنمایی دارید با شماره‌های شرکت تماس گرته و با مخصصین ما مشورت نمایید</h2>
+						</div>
+						<div class="col-12">
+							<div class="row no-gutters icons-cont">
+								<div class="col-12 col-sm-12 col-md-4 col-lg-4 icon-cont">
+									<div class="icon-inner">
+										<div class="service-icon">
+											<div class="service-icon-inner">
+												<img src="<?php  echo (get_template_directory_uri(  ).'/icons/006-home.svg'); ?>" />
+											</div>
+										</div>
+										<p class="service-title">
+											<?php _e('پروژه‌ها','pvd'); ?>
+										</p>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md-4 col-lg-4 icon-cont">
+									<div class="icon-inner">
+										<div class="service-icon">
+											<div class="service-icon-inner">
+												<img src="<?php  echo (get_template_directory_uri(  ).'/icons/005-pen.svg'); ?>" />
+											</div>
+										</div>
+										<p class="service-title">
+											<?php _e('مشاوره رایگان','pvd'); ?>
+										</p>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md-4 col-lg-4 icon-cont">
+									<div class="icon-inner">
+										<div class="service-icon">
+											<div class="service-icon-inner">
+												<img src="<?php  echo(get_template_directory_uri(  ).'/icons/004-winner.svg'); ?>" />
+											</div>
+										</div>
+										<p class="service-title">
+											<?php _e('گواهینامه‌ها','pvd'); ?>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
