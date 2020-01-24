@@ -2,6 +2,9 @@ a,a:visited,a:focus{
    color:$color_main_text;
    text-decoration: none !important;
 }
+h1,h2,h3,h4,h5,h6,p{
+   margin:0;
+}
 .infoline{
    text-align: left;
    direction: ltr;
@@ -197,4 +200,44 @@ a:focus,a:visited{
    background-color: $color_main_text;
    color: #fff;
    margin:50px 0;
+   position: relative;
+   h2{
+      @include vertical_center();
+      position: relative;
+   }
+   p{
+      padding:50px;
+      font-size:13px;
+   }
+}
+.services{
+   margin:50px 0;
+   .title{
+      h5{
+         color:$color_main_orange;
+         text-align: center;
+      }
+      h2{
+         color:$color_main_text;
+         text-align: center;
+      }
+   }
+   .service-icon-inner{
+      width: 75px;
+      display: block;
+      margin: 0 auto;
+   }
+   .service-title{
+      text-align:center;
+   }
+   .icons-cont{
+      margin-top: 50px;
+   }
+   .icon-cont{
+      padding: 25px!important;
+   }
+   .icon-inner{
+      background-color: $color_main_gray;
+      padding: 25px 0;
+   }
 }
