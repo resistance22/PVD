@@ -1,3 +1,5 @@
 node_modules/
 .sass-cache/
 icons/
+style.css
+styel.css.map
