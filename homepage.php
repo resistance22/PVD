@@ -90,7 +90,7 @@ get_header();
 							</div>
 							<div class="row no-gutters">
 								<div class="col-sm-12 col-md-6 col-lg-6 cat-image">
-									<img src="<?php echo get_template_directory_uri(  ).'/icons/WEB3-5.png'; ?>" alt="">
+									<img src="<?php echo get_template_directory_uri(  ).'/icons/PVD/WEB3-6.png'; ?>" alt="">
 								</div>
 								<div class="col-sm-12 col-md-6 col-lg-6">
 									<div class="product-list">
