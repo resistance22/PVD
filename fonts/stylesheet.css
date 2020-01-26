@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Giant';
+    src: url('Giant-Background.eot');
+    src: url('Giant-Background.eot?#iefix') format('embedded-opentype'),
+        url('Giant-Background.woff2') format('woff2'),
+        url('Giant-Background.woff') format('woff'),
+        url('Giant-Background.svg#Giant-Background') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+

@@ -2,7 +2,7 @@ a,a:visited,a:focus{
    color:$color_main_text;
    text-decoration: none !important;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,body,html{
    margin:0;
 }
 .infoline{
@@ -55,7 +55,7 @@ a:focus,a:visited{
       width: 20%;
       height: 100%;
       background-color: #E6E6E6;
-      border-left: 1px solid #989898;
+      border-left: 1px solid #cecece;
    }
 }
 .first-cat{
@@ -286,5 +286,29 @@ a:focus,a:visited{
          background: darkorange;
          border-radius: 0;
       }
+   }
+}
+.site-footer{
+   padding: 75px;
+   background: #323232;
+   color: white;
+   .content{
+      p{
+         font-size: 13px;
+         margin:15px 0;
+      }
+   }
+   .title{
+      padding: 20px 0;
+      border-bottom: 1px dashed #616161;
+      margin-bottom: 20px;
+   }
+   .footer-col{
+      padding:25px !important;
+   }
+}
+.menu-item{
+   a{
+      color:#fff;
    }
 }

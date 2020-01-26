@@ -42,6 +42,40 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@font-face {
+	font-family: 'Giant';
+	src: url('./fonts/Giant-Background.eot');
+	src: url('./fonts/Giant-Background.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/Giant-Background.woff2') format('woff2'),
+		 url('./fonts/Giant-Background.woff') format('woff'),
+		 url('./fonts/Giant-Background.svg#Giant-Background') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Greta';
+	src: url('./fonts/GretaArabic-Bold.eot');
+	src: url('./fonts/GretaArabic-Bold.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/GretaArabic-Bold.woff2') format('woff2'),
+		 url('./fonts/GretaArabic-Bold.woff') format('woff'),
+		 url('./fonts/GretaArabic-Bold.svg#GretaArabic-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+@font-face {
+	font-family: 'Greta Arabic';
+	src: url('./fonts/GretaArabic.eot');
+	src: url('./fonts/GretaArabic.eot?#iefix') format('embedded-opentype'),
+		 url('./fonts/GretaArabic.woff2') format('woff2'),
+		 url('./fonts/GretaArabic.woff') format('woff'),
+		 url('./fonts/GretaArabic.svg#GretaArabic') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 @import "variables-site/classes";
