@@ -120,12 +120,12 @@ get_header();
 					</div>
 				</div>
 			</div><!-- second-cat-->
-			<div class="intro">
+			<div class="intro" style=" background-image:url(<?php echo get_template_directory_uri(  ).'/icons/box-2.svg'; ?>) ">
 				<div class="container">
 					<div class="row no-gutters">
 						<div class="col-12 col-sm-12 col-md-12 col-lg-6">
 							<h2>
-								شرکت خلا‌پوشان فلز
+								<?php _e('شرکت خلا‌پوشان فلز','pvd'); ?>
 							</h2>
 						</div>
 						<div class="col-12 col-sm-12 col-md-12 col-lg-6">
