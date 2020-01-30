@@ -121,7 +121,7 @@ a:focus,a:visited{
    .product-list-self{
       a{
          margin: 10px 0;
-         display: inline-block;
+         display: block;
       }
    }
 }
@@ -240,6 +240,10 @@ a:focus,a:visited{
       background-color: $color_main_gray;
       padding: 25px 0;
    }
+   .title{
+      text-align: center;
+      width: 100%;
+   }
 }
 .contact{
    position: relative;
@@ -292,6 +296,9 @@ a:focus,a:visited{
    padding: 75px;
    background: #323232;
    color: white;
+   p,h1,h2,h3,h4,h5,h6{
+      color: #878788;
+   }
    .content{
       p{
          font-size: 13px;
