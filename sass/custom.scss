@@ -319,7 +319,17 @@ a:focus,a:visited{
       color:#fff;
    }
 }
+.custom-archive-title-cont{
+   background-color: #878787;
+   .custom-archive-title{
+      padding: 50px 0;
+      color:#fff;
+   }
+}
+
+
 .archive-slider{
+   margin-bottom:75px;
    .slider-product-title{
       padding:20px;
       .english_name{
