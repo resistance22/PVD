@@ -63,7 +63,7 @@ get_header();
 											</div>
 											<div class="product-list-self">
 												<?php foreach($posts_first as $post): ?>
-													<a href="<?php echo esc_url($post->guid); ?>">
+													<a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
 														<?php echo esc_html($post -> post_title); ?>
 													</a>
 												<?php endforeach; ?>
@@ -107,7 +107,7 @@ get_header();
 											</div>
 											<div class="product-list-self">
 												<?php foreach($posts_second as $post): ?>
-													<a href="<?php echo esc_url($post->guid); ?>">
+													<a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
 														<?php echo esc_html($post -> post_title); ?>
 													</a>
 												<?php endforeach; ?>
