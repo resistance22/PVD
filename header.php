@@ -60,17 +60,75 @@
 			</div>
 		</div>
 	</div>
+	<?php 
+		$main_cats = get_terms(
+			[
+				'taxonomy' => 'product_cat',
+				'hide_empty' => false,
+				'parent' => 0
+			]
+		);
+	?>
+	<pre>
+		<?php print_r($main_cats); ?>
+	</pre>
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="row no-gutters">
 			<div class="col-12 col-sm-12 col-md-6 col-lg-6">
 					<nav id="site-navigation" class="main-navigation">
-						<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						) );
-						?>
+						<div class="row no-gutters">
+							<div class="product-menu">
+								<span class="product-menu-icon">
+									<?php echo __('محصولات','pvd'); ?>
+								</span>
+								<div class="row no-gutters op-menu">
+									<div class="col-12 col-md-2 col-lg-2 product-menu-sec">
+										<?php foreach($main_cats as $main_cat): 
+											$name = $main_cat -> name;	
+										?>
+											<div term="<?php echo esc_attr( $main_cat->term_id ) ?>" class="product-main-item">
+												<span  class="product-main-cat-name">
+													<?php echo $name; ?>
+												</span>
+											</div>
+										<?php endforeach; ?>
+									</div>
+									<div class="col-12 col-md-2 col-lg-2 product-menu-sec">
+									<?php foreach($main_cats as $main_cat): 
+											$sub_cats = get_terms(
+												[
+													'taxonomy' => 'product_cat',
+													'hide_empty' => false,
+													'parent' => $main_cat->term_id
+												]
+											);
+										?>
+										<div parent-cat="<?php echo esc_attr( $main_cat->term_id ) ?>" class="sub-cat-cont">
+											<?php foreach($sub_cats as $sub_cat): ?>
+												<div class="product-sub-item">
+													<span class="product-sub-cat-name">
+														<?php echo $sub_cat->name; ?>
+													</span>
+												</div>
+											<?php endforeach; ?>
+										</div>
+									<?php endforeach; ?>
+									</div>
+									<div class="col-12 col-md-2 col-lg-2">
+
+									</div>
+									<div class="col-12 col-md-2 col-lg-6">
+									</div>
+								</div>
+							</div>
+							<?php
+								wp_nav_menu( array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								) );
+							?>
+						</div>
 					</nav><!-- #site-navigation -->
 				</div>
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6">
