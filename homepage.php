@@ -6,13 +6,6 @@ get_header();
 	<?php 
  	$posts_first = get_posts( [
 		'numberposts'      => -1,
-		'tax_query'         => [
-			[
-				'taxonomy' => 'product_cat',
-				'field' => 'term_id',
-				'terms' => 4
-			]
-		],
 		'orderby'          => 'date',
 		'order'            => 'DESC',
 		'post_type'        => 'product'
@@ -42,87 +35,42 @@ get_header();
 			<div class="row no-gutters first-cat">
 				<div class="col-12">
 					<div class="row no-gutters">
-						<div class="col-12 col-sm-12 col-md-10 col-lg-10">
-							<div class="plist-bg">
-								<div class="bg-white"></div>
-								<div class="bg-orange"></div>
-							</div>
-							<div class="row no-gutters">
-								<div class="col-sm-12 col-md-6 col-lg-6 cat-image">
-									<img src="<?php echo get_template_directory_uri(  ).'/icons/WEB3-5.png'; ?>" alt="">
-								</div>
-								<div class="col-sm-12 col-md-6 col-lg-6">
-									<div class="product-list">
-										<div class="product-list-inner">
-											<div class="plist-header">
-												<div class="plist-title">
-													<h6>
-														<?php echo __('دسته بندی محصولات شرکت','pvd'); ?>
-													</h6>
-													<h2 class="main-title">
-														<?php echo __('در حوزه پوشش‌دهی خلا','pvd'); ?>
-													</h2>
+						<div class="homepage-swiper">
+    						<div class="swiper-wrapper">
+								<?php foreach($posts_first as $post): ?>
+									<div class="swiper-slide">
+										<div class="slider-bg">
+											<div class="white-bg"></div>
+											<div class="orange-bg"></div>
+										</div>
+											<div class="row no-gutters">
+												<div class="col-sm-12 col-md-6 col-lg-7">
+													<a class="product-anchor" href="<?php echo esc_url( get_permalink( $post->ID) ); ?>">
+														<div class="slider-product-title">
+															<h3 class="english_name">
+																<?php echo get_post_meta($post->ID, 'engish_name',True); ?>
+															</h3>
+															<h3 class="product-name"><?php echo esc_html($post -> post_title); ?></h3>
+														</div>
+													</a>
+												</div>
+												<div class="col-sm-12 col-md-6 col-lg-5">
+													<div class="product-image"><img src="<?php echo get_the_post_thumbnail_url( $post->ID ) ?>" alt="<?php echo esc_html($post -> post_title); ?>"></div>
 												</div>
 											</div>
-											<div class="product-list-self">
-												<?php foreach($posts_first as $post): ?>
-													<a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-														<?php echo esc_html($post -> post_title); ?>
-													</a>
-												<?php endforeach; ?>
-											</div>
-										</div>
 									</div>
-								</div>
+								<?php endforeach; ?>
 							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination swiper-pagination-black"></div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next swiper-button-black"></div>
+							<div class="swiper-button-prev swiper-button-black"></div>
 						</div>
 					</div>
 				</div>
 			</div><!-- first-cat -->
 
-
-
-
-			<div class="row no-gutters second-cat">
-				<div class="col-12">
-					<div class="row no-gutters">
-						<div class="col-12 col-sm-12 col-md-10 col-lg-10">
-							<div class="plist-bg">
-								<div class="bg-white"></div>
-								<div class="bg-orange"></div>
-							</div>
-							<div class="row no-gutters">
-								<div class="col-sm-12 col-md-6 col-lg-6 cat-image">
-									<img src="<?php echo get_template_directory_uri(  ).'/icons/PVD/WEB3-6.png'; ?>" alt="">
-								</div>
-								<div class="col-sm-12 col-md-6 col-lg-6">
-									<div class="product-list">
-										<div class="product-list-inner">
-											<div class="plist-header">
-												<div class="plist-title">
-													<h6>
-														<?php echo __('دسته بندی محصولات شرکت','pvd'); ?>
-													</h6>
-													<h2 class="main-title">
-														<?php echo __('در حوزه فرآوری مواد پیشرفته','pvd'); ?>
-													</h2>
-												</div>
-											</div>
-											<div class="product-list-self">
-												<?php foreach($posts_second as $post): ?>
-													<a href="<?php echo esc_url(get_permalink($post->ID)); ?>">
-														<?php echo esc_html($post -> post_title); ?>
-													</a>
-												<?php endforeach; ?>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- second-cat-->
 			<div class="intro" style=" background-image:url(<?php echo get_template_directory_uri(  ).'/icons/box-2.svg'; ?>) ">
 				<div class="container">
 					<div class="row no-gutters">
@@ -132,9 +80,14 @@ get_header();
 							</h2>
 						</div>
 						<div class="col-12 col-sm-12 col-md-12 col-lg-6">
-								<p>
-								لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
-								</p>
+							<?php 
+								if ( have_posts() ) {
+									while ( have_posts() ) {
+										the_post(); 
+										the_content();
+									} // end while
+								} // end if
+							?>
 						</div>
 					</div>
 				</div>
@@ -143,8 +96,8 @@ get_header();
 				<div class="container">
 					<div class="row no-gutters">
 						<div class="title">
-							<h5>‫شرکت خلا پوشان فلز همواره آماده‌ی پاسخ‌گویی به سوالات شماست</h5>
-							<h2>در صورتی که نیاز به راهنمایی دارید با شماره‌های شرکت تماس گرته و با مخصصین ما مشورت نمایید</h2>
+							<h5> <?php _e('‫شرکت خلا پوشان فلز همواره آماده‌ی پاسخ‌گویی به سوالات شماست','pvd'); ?> </h5>
+							<h2><?php _e('در صورتی که نیاز به راهنمایی دارید با شماره‌های شرکت تماس گرفته و با مخصصین ما مشورت نمایید','pvd'); ?></h2>
 						</div>
 						<div class="col-12">
 							<div class="row no-gutters icons-cont">
@@ -200,7 +153,7 @@ get_header();
 						<div class="col-12 col-sm-12 col-md-6 col-lg-7">
 							<div class="contact-form-cont">
 								<h3 class="contact-form-title">
-									<?php _e('پروژه‌ی حدید دارید؟با ما در ارتباطب باشید.','pvd'); ?>
+									<?php _e('با ما در ارتباط باشید.','pvd'); ?>
 								</h3>
 								<div class="form-cont">
 									<form>
