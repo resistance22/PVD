@@ -69,9 +69,6 @@
 			]
 		);
 	?>
-	<pre>
-		<?php print_r($main_cats); ?>
-	</pre>
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="row no-gutters">
@@ -104,9 +101,9 @@
 												]
 											);
 										?>
-										<div parent-cat="<?php echo esc_attr( $main_cat->term_id ) ?>" class="sub-cat-cont">
+										<div  parent-cat="<?php echo esc_attr( $main_cat->term_id ) ?>" class="sub-cat-cont">
 											<?php foreach($sub_cats as $sub_cat): ?>
-												<div class="product-sub-item">
+												<div self-cat="<?php echo esc_attr( $sub_cat->term_id ) ?>" class="product-sub-item">
 													<span class="product-sub-cat-name">
 														<?php echo $sub_cat->name; ?>
 													</span>
@@ -116,9 +113,43 @@
 									<?php endforeach; ?>
 									</div>
 									<div class="col-12 col-md-2 col-lg-2">
-
+										<?php foreach($main_cats as $main_cat): 
+												$sub_cats = get_terms(
+													[
+														'taxonomy' => 'product_cat',
+														'hide_empty' => false,
+														'parent' => $main_cat->term_id
+													]
+												);
+										?>
+												<?php foreach($sub_cats as $sub_cat): 
+														$products = get_posts( [
+															'numberposts'      => -1,
+															'tax_query'         => [
+																[
+																	'taxonomy' => 'product_cat',
+																	'field' => 'term_id',
+																	'terms' => $sub_cat->term_id
+																]
+															],
+															'orderby'          => 'date',
+															'order'            => 'DESC',
+															'post_type'        => 'product'
+														]);
+												?>
+													<div parent-sub-cat="<?php echo esc_attr( $sub_cat->term_id ) ?>" class="product-cat-cont">
+														<?php foreach($products as $product): ?>
+															<div p-id="<?php echo $product->ID ?>" class="product-item">
+																<span class="product-sub-cat-name">
+																	<?php echo $product->post_title; ?>
+																</span>
+															</div>
+														<?php endforeach; ?>
+													</div>
+												<?php endforeach; ?>
+										<?php endforeach; ?>
 									</div>
-									<div class="col-12 col-md-2 col-lg-6">
+									<div class="col-12 col-md-6 col-lg-6">
 									</div>
 								</div>
 							</div>
