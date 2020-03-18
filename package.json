@@ -4,7 +4,7 @@
   "description": "pvd theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "grunt": "node_modules/grunt/bin/grunt watch"
   },
   "author": "amin foroutan",
   "license": "ISC",
