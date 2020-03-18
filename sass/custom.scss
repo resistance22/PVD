@@ -28,6 +28,9 @@ h1,h2,h3,h4,h5,h6,p,body,html{
 .site-branding{
    height: 50px;
    text-align: left;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
    .custom-logo-link{
       height: 100%;
    }
@@ -198,7 +201,6 @@ a:focus,a:visited{
 .intro{
    background-color: $color_main_text;
    color: #fff;
-   margin:50px 0;
    position: relative;
    h2{
       @include vertical_center();
@@ -337,4 +339,38 @@ a:focus,a:visited{
          color: #e6e6e6;
       }
    }
+}
+.homepage-swiper{
+   width:100% !important;
+   overflow: hidden;
+   .product-image{
+      padding: 100px;
+   }
+   .slider-product-title:hover .english_name{
+      color:#323232;
+   }
+   .slider-product-title:hover .product-name{
+      color: #e6510e;
+   }
+   
+   .product-anchor{
+      display: block;
+      margin:0 75px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   .english_name{
+      font-size: 6em;
+      font-family: giant;
+      color: #e6e6e6;
+      transition: all 200ms ease-in-out;
+   }
+   .english_name + h3{
+      font-size: 3em;
+      transition: all 200ms ease-in-out;
+   }
+}
+.swipper-slide{
+   width:100%;
 }

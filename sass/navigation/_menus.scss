@@ -133,18 +133,20 @@
 	min-height: 25em;
 	opacity: 0;
 	pointer-events: none;
+	z-index: 100;
 }
 
 .product-menu-sec {
     border-left: 1px solid #4a4a4a;
 }
-.product-main-item, .product-sub-item {
+.product-main-item, .product-sub-item ,.product-item{
     padding: 15px;
 	color: white;
 	cursor: pointer;
+	font-size: 0.8em;
 }
 
-.sub-cat-cont {
+.sub-cat-cont,.product-cat-cont {
     position: absolute;
     top: 0;
 	display: none;
@@ -167,6 +169,10 @@
     border-bottom: 1px solid #e6501e;
 }
 .product-main-item.active{
+	background-color: #232323;
+	border-bottom: 1px solid #e6501e; 
+}
+.product-item.active{
 	background-color: #232323;
 	border-bottom: 1px solid #e6501e; 
 }
