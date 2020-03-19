@@ -72,7 +72,7 @@
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="row no-gutters">
-			<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+			<div class="col-12 col-sm-12 col-md-6 col-lg-9">
 					<nav id="site-navigation" class="main-navigation">
 						<div class="row no-gutters">
 							<div class="product-menu">
@@ -167,7 +167,7 @@
 						</div>
 					</nav><!-- #site-navigation -->
 				</div>
-				<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-3">
 					<div class="site-branding">
 						<?php
 							the_custom_logo();
