@@ -202,13 +202,15 @@ a:focus,a:visited{
    background-color: $color_main_text;
    color: #fff;
    position: relative;
+   padding: 75px 0;
    h2{
       @include vertical_center();
       position: relative;
    }
    p{
-      padding:50px;
-      font-size:13px;
+      padding: 20px;
+      font-size: 0.8em;
+      background: gray;
    }
 }
 .services{
@@ -401,8 +403,37 @@ a:focus,a:visited{
    border-bottom: 10px solid #e6501e;
    border-top: 10px solid #e6501e;
 }
+
+
+.page{
+   .page-header{
+      padding: 50px 25px;
+      margin-top: 50px;
+      background: #323232;
+      color: #ffffff;
+      border-top: 10px solid #e6501e;
+   }
+   .entry-content{
+      padding: 20px;
+      background: white;
+   }
+}
 .container{
    padding: 0;
 }
-
+.site-footer .content p{
+   margin:0 0 15px 0 !important;
+}
+.site-footer .content h4{
+   display: inline-block;
+   padding-left: 34px;
+   padding-bottom: 5px;
+}
+.site-footer p, .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .site-footer a {
+   color:white;
+}
+a.tel{
+   direction: ltr !important;
+   display: inline-block;
+}
 
