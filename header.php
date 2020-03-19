@@ -80,18 +80,20 @@
 									<?php echo __('محصولات','pvd'); ?>
 								</span>
 								<div class="row no-gutters op-menu">
-									<div class="col-12 col-md-2 col-lg-2 product-menu-sec">
+									<div class="col-12 col-md-2 col-lg-4 product-menu-sec">
 										<?php foreach($main_cats as $main_cat): 
 											$name = $main_cat -> name;	
 										?>
 											<div term="<?php echo esc_attr( $main_cat->term_id ) ?>" class="product-main-item">
-												<span  class="product-main-cat-name">
-													<?php echo $name; ?>
-												</span>
+												<a href="<?php echo get_term_link($main_cat->term_id); ?>">
+													<span  class="product-main-cat-name">
+														<?php echo $name; ?>
+													</span>
+												</a>
 											</div>
 										<?php endforeach; ?>
 									</div>
-									<div class="col-12 col-md-2 col-lg-2 product-menu-sec">
+									<div class="col-12 col-md-2 col-lg-4 product-menu-sec">
 									<?php foreach($main_cats as $main_cat): 
 											$sub_cats = get_terms(
 												[
@@ -104,15 +106,17 @@
 										<div  parent-cat="<?php echo esc_attr( $main_cat->term_id ) ?>" class="sub-cat-cont">
 											<?php foreach($sub_cats as $sub_cat): ?>
 												<div self-cat="<?php echo esc_attr( $sub_cat->term_id ) ?>" class="product-sub-item">
-													<span class="product-sub-cat-name">
-														<?php echo $sub_cat->name; ?>
-													</span>
+													<a href="<?php echo get_term_link($sub_cat->term_id); ?>">
+														<span class="product-sub-cat-name">
+															<?php echo $sub_cat->name; ?>
+														</span>
+													</a>
 												</div>
 											<?php endforeach; ?>
 										</div>
 									<?php endforeach; ?>
 									</div>
-									<div class="col-12 col-md-2 col-lg-2">
+									<div class="col-12 col-md-2 col-lg-4">
 										<?php foreach($main_cats as $main_cat): 
 												$sub_cats = get_terms(
 													[
@@ -140,17 +144,18 @@
 													<div parent-sub-cat="<?php echo esc_attr( $sub_cat->term_id ) ?>" class="product-cat-cont">
 														<?php foreach($products as $product): ?>
 															<div p-id="<?php echo $product->ID ?>" class="product-item">
-																<span class="product-sub-cat-name">
-																	<?php echo $product->post_title; ?>
-																</span>
+																<a href="<?php echo get_permalink( $product->ID ); ?>">
+																	<span class="product-sub-cat-name">
+																		<?php echo $product->post_title; ?>
+																	</span>
+																</a>
 															</div>
 														<?php endforeach; ?>
 													</div>
 												<?php endforeach; ?>
 										<?php endforeach; ?>
 									</div>
-									<div class="col-12 col-md-6 col-lg-6">
-									</div>
+
 								</div>
 							</div>
 							<?php
