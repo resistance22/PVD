@@ -11,7 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php //pvd_post_thumbnail(); ?>
-	<?php bcn_display( false, true,false, false); ?>
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
