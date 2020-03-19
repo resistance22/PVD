@@ -374,3 +374,35 @@ a:focus,a:visited{
 .swipper-slide{
    width:100%;
 }
+.archive{
+   .entry-content{
+      padding: 25px;
+      h3{
+         padding: 20px 0;
+         text-align: center;
+         background: gray;
+         color: white;
+         transition:all 250ms ease-in-out;
+      }
+      h3:hover{
+         background: #323232;
+      }
+      }
+      .product-img{
+         padding: 20px;
+         background:white;
+      }
+}
+.archive-page-header{
+   padding: 50px 25px;
+   margin: 50px 0;
+   background: #323232;
+   color: #ffffff;
+   border-bottom: 10px solid #e6501e;
+   border-top: 10px solid #e6501e;
+}
+.container{
+   padding: 0;
+}
+
+

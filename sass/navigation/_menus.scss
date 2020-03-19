@@ -123,7 +123,10 @@
 	font-size: 12px;
 }
 .op-menu {
-    width: 75.95em;
+	a{
+		color:white!important;
+	}
+    width: 50em;
     position: absolute;
     top: 117px;
     z-index: 1;
