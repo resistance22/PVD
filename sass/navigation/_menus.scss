@@ -110,6 +110,7 @@
 .product-menu {
 	position: relative;
 	padding: 40px 0;
+	cursor: pointer;
 }
 
 .product-menu-icon {
@@ -125,6 +126,7 @@
 .op-menu {
 	a{
 		color:white!important;
+		font-size: 1.1em;
 	}
     width: 50em;
     position: absolute;
