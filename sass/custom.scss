@@ -347,6 +347,10 @@ a:focus,a:visited{
    overflow: hidden;
    .product-image{
       padding: 100px;
+      text-align: center;
+      img{
+         height: 350px;
+      }
    }
    .slider-product-title:hover .english_name{
       color:#323232;
@@ -393,6 +397,10 @@ a:focus,a:visited{
       .product-img{
          padding: 20px;
          background:white;
+         text-align: center;
+         img{
+            height: 225px;
+         }
       }
 }
 .archive-page-header{
